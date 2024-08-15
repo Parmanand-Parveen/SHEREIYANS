@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.color {
+  /* color: #378dd8;
+  color: aquamarine;
+  color: hsl(0, 36%, 42%);
+  color: rgb(56, 217, 75);
+  color: rgb(102, 0, 255); */
+  color: rgba(red, green, blue, alpha);
+}

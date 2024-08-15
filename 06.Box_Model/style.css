@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.box1 {
+ font-size: 50px;
+ display: inline-block;
+  margin: 50px;
+  border: 5px solid black;
+  
+}
+
+.box2 {
+  margin: 50px;
+  display: inline-block;
+  font-size: 50px;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-left: 10px dashed blue;
+  border-right: 10px dashed blue;
+  
+}
+
+.circle{
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #000;
+    outline: 5px solid salmon;
+}

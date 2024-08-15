@@ -1,0 +1,56 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box4;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.card{
+    position: absolute;
+   
+    width: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.card > img{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card > h1{
+    margin: 10px 0px;
+    font-weight: 800;
+}
+
+.card > p{
+    margin-bottom: 10px;
+}
+
+.card > button{
+    padding: 3px 8px;
+    background: #d624249c;
+}
+
+

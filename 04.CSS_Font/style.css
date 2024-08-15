@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.head1{
+font-size: smaller;
+font-weight: lighter;
+
+}
+
+.head2{
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: "Grey Qo", cursive;
+    text-decoration: underline;
+
+}
+
