@@ -1,0 +1,109 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #e5e7df;
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding:3vh 2vw;
+    align-items: baseline;
+    
+}
+
+.part1{
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+.part2{
+    display: flex;
+    gap: 1vw;
+}
+.nav{
+    font-size: 1.4vw;
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+    transition: 0.25s;
+}
+
+.nav:hover{
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.part3{
+    font-size: 1.75vw;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+.hero_section{
+    padding: 0 2vw;
+    display: flex;
+  justify-content: space-between;
+
+    
+}
+
+.none{
+    height: 15vh;
+}
+
+.left{
+    width: 40vw;
+}
+.right{
+    width: 60vw;
+   
+}
+
+.left p{
+    font-size: 1.75vw;
+    width: 65%;
+    margin-bottom: 3vh;    
+
+}
+
+.left button{
+    border: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    background-color: transparent;
+    font-size: 1.2vw;
+}
+button{
+    display: flex;
+    gap: 4vw;
+    cursor: pointer;
+}
+
+
+.right h1{
+    margin-left: 15vw;
+    font-size: 2.5vw;
+    width: 75%;
+}
+
+marquee{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50vh;
+    font-weight: 900;
+}
+
+marquee img{
+    height: 35vh;
+}
+
+.nav1{
+    border-bottom: 1px solid black;
+}
