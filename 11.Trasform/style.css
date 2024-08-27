@@ -1,0 +1,44 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.main button{
+    padding: 10px 30px;
+    border: 1px solid white;
+    background-color: red;
+    color: white;
+    transition: .25s;
+}
+
+.main button:hover{
+    box-shadow: 5px 5px 10px gray;
+    border: 1px solid pink;
+    color: black;
+    background-color: white;
+    /* rotate: 30deg; */
+    transform-origin: top right;
+    transform:skew(5deg) scale(1.2);
+    /* transform: scale(1.2); */
+    /* translate: 100px
+    ; */
+}
+
+p{
+    text-shadow: 1px 1px 5px red;
+}
