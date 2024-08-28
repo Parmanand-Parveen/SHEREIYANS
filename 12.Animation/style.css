@@ -8,3 +8,62 @@ html,body{
     height: 100%;
     width: 100%;
 }
+
+.box{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    background-color: blueviolet;
+    top: 0;
+    left: 0;
+    animation: move 5s linear 1s infinite;
+}
+
+.box::before{
+    content: "Hello";
+}
+
+.box::after{
+    content: "World";
+}
+
+.box::first-letter{
+    color: white;
+    font-size: 3vw;
+}
+
+@keyframes move{
+    0%{
+        top: 0%;
+        left: 0%;
+        transform: scale(0) rotate(0);
+        background-color: blueviolet;
+
+    }
+    25%{
+        top: 0%;
+        left: 50%;
+        transform: scale(.25) rotate(90deg);
+        background-color: brown;
+
+    }
+    50%{
+        top: 50%;
+        left: 50%;
+        transform: scale(.5) rotate(180deg);
+        background-color: aqua;
+    }
+
+    75%{
+       transform: scale(.75) rotate(270deg);
+         top: 50%;
+         left: 0%;
+         background-color: chocolate;
+    }
+    100%{
+        top: 0%;
+        left: 0%;
+        transform: scale(1) rotate(360deg);
+        background-color: blueviolet;
+    }
+}
