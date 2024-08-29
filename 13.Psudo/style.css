@@ -1,0 +1,56 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 150%;
+    width: 100%;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+}
+
+.child{
+    font-size: 40px;
+    position: relative;
+    
+}
+
+.child::before{
+    content: "";
+    position: absolute;
+    height: 5%;
+    width: 0%;
+    background-color: red;
+    bottom: 0;
+    left: 0;
+    transition: 0.25s all;
+}
+
+.child:hover::before{
+    width: 100%;
+}
+
+
+.child::after{
+    content: "";
+    position: absolute;
+    height: 6%;
+    width: 0%;
+    background-color: red;
+    top: 0;
+    right: 0;
+    transition: 0.25s all;
+}
+
+.child:hover::after{
+    width: 100%;
+}
