@@ -74,3 +74,14 @@ console.log(a === b)}
 // 04. Logical operators 
 
 //  &&  ||  !  result (according to the data which is logically compared)
+// comparision between bool value 
+
+// true&&true&&false  = false
+// true&&true&&true = true
+
+// true||true||false = true
+// false||false||false = false
+
+// Falsy value = false , 0 , null , undefined , NaN , "" , big-int
+
+// 0.1 && -10 && null = null
