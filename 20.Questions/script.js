@@ -25,5 +25,28 @@
 // console.log(`The simple interest is ${si}`)
 
 //Accept the  3 sides of a triangle and find the area by herons formula
+
+// let a = +prompt("Enter the first side")
+// let b = +prompt("Enter the second side")
+// let c = +prompt("Enter the third side")
+
+// let s = (a+b+c)/2
+
+// let area = Math.sqrt(s*(s-a)*(s-b)*(s-c)).toFixed(2)
+
+// console.log(`The area of triangle is ${area}`)
+
 //Find the circumfrence of a sphere
+
+// let r = +prompt("Enter the radius of sphere")
+
+// let circumfrence = 2*Math.PI*r
+// console.log(`The circumfrence of sphere is ${circumfrence}`)
+
 // Find the area and parameter of the circle
+
+// let r = +prompt("Enter the radius of circle")
+
+// let area = Math.PI*r*r
+// let parameter = 2*Math.PI*r
+// console.log(`The area of circle is ${area} and the parameter is ${parameter}`)
