@@ -66,12 +66,47 @@
 // let c = "Delhi"
 // getname(n,c)
 
-function getsum(a,b){
-   sum = a+b
-    return sum
-}
+// function getsum(a,b){
+//    sum = a+b
+//     return sum
+// }
 
-let res = getsum(2,3)
-let multiple = 5
+// let res = getsum(2,3)
+// let multiple = 5
 
-console.log(res*multiple)
+// console.log(res*multiple)
+
+// +++++++++++++++++++++++++++++++++++++++++++++++26/09/2024++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// function getdetails(name,batch = "Mern12"){
+//     console.log(name,batch)
+// }
+
+// getdetails("John")
+// getdetails("Aman", "Batch12")
+
+// 1. Default parameter must be the last parameter of the function 
+// 2. There should only 1 default parameter in the function  
+
+
+// Rest operator
+
+// function hobbies(...hobbies){
+//     console.log(hobbies)
+// }
+
+// hobbies("Cricket","Football")
+// hobbies("Cricket","Hockey")
+// hobbies()
+
+//1. Rest operator must be the last parameter of the function
+//2. there must be only one rest parameter in the function
+
+// const greet = ()=> {
+//      return "hello"
+// }
+
+// const greet = ()=> "hello"
+
+// const sum = (a,b) => a+b;
+// sum(2,3)
