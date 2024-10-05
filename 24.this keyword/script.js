@@ -33,24 +33,24 @@
 
 //Difference between normal function and arrow function
 
-function greet (){
-    console.log(this)
-    console.log(arguments)
-    console.log(globalThis)
-}
+// function greet (){
+//     console.log(this)
+//     console.log(arguments)
+//     console.log(globalThis)
+// }
 
-greet()
-console.log("Normal function")
+// greet()
+// console.log("Normal function")
 
-console.log("---------------------------------------------")
+// console.log("---------------------------------------------")
 
-console.log("Arrow function")
+// console.log("Arrow function")
 
 // TODO: Normal function vs arrow function in javascript
-const greetArrow = ()=>{
-    console.log(this)
-    // console.log(arguments)
-    console.log(globalThis)
-}
+// const greetArrow = ()=>{
+//     console.log(this)
+//     // console.log(arguments)
+//     console.log(globalThis)
+// }
 
-greetArrow()
+// greetArrow()
