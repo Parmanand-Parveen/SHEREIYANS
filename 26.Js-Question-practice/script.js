@@ -607,24 +607,24 @@
 // Automorphic number 5 = 25 ,625 = 390625, 6=36, 76 = 5776
 
 
-let a = +prompt("Enter the number")
+// let a = +prompt("Enter the number")
 
-let square = a**2
+// let square = a**2
 
 
-let flag = true
-while(a>0){
-	let rem = a%10
+// let flag = true
+// while(a>0){
+// 	let rem = a%10
    
-   if(rem == square%10){
-   	  flag = true
-   }else{
-   	 flag =false
-   	 break
-   }
-   a = Math.floor(a/10)
-   square = Math.floor(square/10)
-}
+//    if(rem == square%10){
+//    	  flag = true
+//    }else{
+//    	 flag =false
+//    	 break
+//    }
+//    a = Math.floor(a/10)
+//    square = Math.floor(square/10)
+// }
 
 
-console.log(flag?"Automorphic Number":"Not Automorphic Number")
+// console.log(flag?"Automorphic Number":"Not Automorphic Number")
