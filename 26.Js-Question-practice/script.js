@@ -441,7 +441,190 @@
 // }
 
 
-let arr = [1,2,3,4,5,6,7,8,9,10]
+// let arr = [1,2,3,4,5,6,7,8,9,10]
 
 
-console.log(arr.splice(2,3)	)
+// console.log(arr.splice(2,3)	)
+
+
+// *******************************************************************************************************************
+
+// 31- Print the sum of all factors of a number, 50 -> 1 + 2 + 5 + 10 + 25 = 43
+
+
+// let n = +prompt("Enter the number")
+
+// let sum = 0
+
+// for(let i=1;i<=n/2;i++){
+//     if(n%i == 0){
+//         sum = sum+i
+//     }
+// }
+// console.log(sum)
+
+
+//*******************************************************************************************************************
+
+
+// 32- Check if the number is Prime or not.
+
+
+// let n = +prompt("Enter the number")
+// let flag =  true
+// for(let i=2;i<=n/2;i++){
+//     if(n%i == 0){
+//         flag = false
+//         break
+//     }else{
+//         flag=true
+//     }
+// }
+
+// console.log(flag?"Prime":"Not Prime")
+
+
+//****************************************************************************************************************
+
+// 33- Write a program to take two inputs a, b & find the value of a  raised to the power of b. 
+// 	Ex - a = 2, b = 5
+// 	OP - 2^5 = 32
+
+// Without using loop
+
+// let a = +prompt("Enter the number")
+// let b = +prompt("Enter the number")
+// let ans = a**b
+// console.log(ans)
+
+
+// By using loop
+
+// let a = +prompt("Enter the number")
+// let b = +prompt("Enter the number")
+// let ans = 1
+// for(let i=1;i<=b;i++){
+// 	ans = ans*a
+// }
+// console.log(ans)
+
+
+//****************************************************************************************************************
+
+// 34- Seprate each digit of a number and print it on the new line ex - 123 
+// 	OP
+// 		3
+// 		2
+// 		1
+
+// let a = +prompt("Enter the number")
+
+// while(a>0){
+// 	let rem = a%10
+// 	console.log(rem)
+// 	a = Math.floor(a/10)
+// }
+
+
+//****************************************************************************************************************
+
+
+// 35- Sum of digits of a number, 936 = 18
+
+
+// let a = +prompt("Enter the number")
+// let sum = 0
+// while(a>0){
+// 	let rem = a%10
+// 	sum = sum+rem
+// 	a = Math.floor(a/10)
+// }
+// console.log(sum)
+
+
+//****************************************************************************************************************
+
+
+// 36- Accept a number and print its reverse
+
+
+// let a = +prompt("Enter the number")
+
+// let rev = 0
+// while(a>0){
+// 	rev =( rev*10) + (a%10)
+// 	a = Math.floor(a/10)
+// }
+
+// console.log(rev)
+
+
+//****************************************************************************************************************
+
+
+// 37- Accept a number and check if it is a pallindromic number (If number and its reverse are equal)
+//        Ex - 12321 - Rerverse - 12321
+
+
+// let a = +prompt("Enter the number")
+// let temp = a
+
+// let rev = 0
+// while(a>0){
+// 	rev =( rev*10) + (a%10)
+// 	a = Math.floor(a/10)
+// }
+
+// console.log(rev == temp?"Palindrome":"Not Palindrome")
+
+
+//****************************************************************************************************************
+
+
+// 38- Accept a number and check if it is a strong number or not (Sum of factorial of each digit)
+//        Ex- 145 = 1! + 4! + 5! = 145
+
+
+// let a = +prompt("Enter the number")
+// let temp = a
+
+// let sum = 0
+// while(a>0){
+// 	let rem = a%10
+// 	let fact = 1
+// 	for(let i=1;i<=rem;i++){
+// 		fact = fact*i
+// 	}
+// 	sum = sum+fact
+// 	a = Math.floor(a/10)
+// }
+// console.log(sum == temp?"Strong Number":"Not Strong Number")
+
+
+//****************************************************************************************************************
+
+
+// Automorphic number 5 = 25 ,625 = 390625, 6=36, 76 = 5776
+
+
+let a = +prompt("Enter the number")
+
+let square = a**2
+
+
+let flag = true
+while(a>0){
+	let rem = a%10
+   
+   if(rem == square%10){
+   	  flag = true
+   }else{
+   	 flag =false
+   	 break
+   }
+   a = Math.floor(a/10)
+   square = Math.floor(square/10)
+}
+
+
+console.log(flag?"Automorphic Number":"Not Automorphic Number")
