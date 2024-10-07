@@ -1,6 +1,6 @@
 // // Array are hetrogenous data type
 
-let arr = [1,2,3,4,5,6,7,8,9,10]
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // console.log(arr)
 
@@ -24,12 +24,43 @@ let arr = [1,2,3,4,5,6,7,8,9,10]
 
 // ****************************Delete elements****************************************
 
-// console.log(arr.pop()) //Delete last element 
+// console.log(arr.pop()) //Delete last element
 // console.log(arr.shift()) //Delete first element
 // console.log(arr.splice(1,2))  // Delete 2 elements from index 1 . first argument is the index from where we want to delete the elements and second is the number of elements to be deleted
 
-//Triversing an array
+//Traversing an array
 
-for(let element of arr){
-    console.log(element)
-}
+// for(let element of arr){
+//     console.log(element)
+// }
+
+// Foreach vs map
+
+// console.log(arr)
+// arr.forEach((element,index) =>  {    //It is a mutable method  means it changes the original array
+//    arr[index]= element*2
+//     console.log(element,index)
+// })
+// console.log(arr)
+
+// let arrcopy = arr.map((element,index) =>  {       //It is a immutable method that means it doesn't change the original array
+//      return element*2
+// })
+
+// console.log(arr)
+// console.log(arrcopy)
+// console.log(arr)
+
+// let filteredData = arr.filter((element,index) =>  {       //It is a immutable method that means it doesn't change the original array
+//      return element%2==0
+//  })
+
+//  console.log(filteredData)
+//  console.log(arr)
+
+// let filteredData = arr.find((element,index) =>  {       //It is a immutable method that means it doesn't change the original array)
+//      return element%2==0
+//   })
+
+//   console.log(filteredData)
+//   console.log(arr)
