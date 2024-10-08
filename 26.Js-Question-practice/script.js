@@ -628,3 +628,112 @@
 
 
 // console.log(flag?"Automorphic Number":"Not Automorphic Number")
+
+
+//*******************************************************************************************************************************
+
+
+// 40- Print hello until user gives wrong input using do while
+
+
+// let i = 0
+// do {
+// 	i = +prompt("Enter the number")
+// 	console.log("Hello World")
+// } while (i!=10);
+
+
+//************************************************************************************************************************
+
+
+// 41- Make a choice based calculator using do while
+
+// let i 
+
+// do {
+//    console.log("Menu\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Modulus\n6.Exit")
+//    i = +prompt("Enter your choice")
+//    if(i==1){
+//    	let a = +prompt("Enter the number")
+//    	let b = +prompt("Enter the number")
+//    	console.log("Addition",a+b)
+//    }else if(i==2){
+//    	let a = +prompt("Enter the number")
+//    	let b = +prompt("Enter the number")
+//    	console.log("Subtraction",a-b)
+//    }else if(i==3){
+//    	let a = +prompt("Enter the number")
+//    	let b = +prompt("Enter the number")
+//    	console.log("Multiplication",a*b)
+//    }else if(i==4){
+//    	let a = +prompt("Enter the number")
+//    	let b = +prompt("Enter the number")
+//    	console.log("Division",a/b)
+//    }else if(i==5){
+//    	let a = +prompt("Enter the number")
+//    	let b = +prompt("Enter the number")
+//    	console.log("Mod",a%b)
+//    }else{
+//        console.log("Invalid Input")
+//    }
+	
+// } while (i!=0);
+
+
+//*************************************************************************************************************************
+
+
+// 42- Print Weekday using Switch
+
+
+// let i = +prompt("Enter the number")
+
+
+// switch(i){	
+// 	case 1:
+// 		console.log("Monday")
+// 		break
+// 	case 2:
+// 		console.log("Tuesday")
+// 		break
+// 	case 3:
+// 		console.log("Wednesday")
+// 		break
+// 	case 4:
+// 		console.log("Thursday")
+// 		break
+// 	case 5:
+// 		console.log("Friday")
+// 		break
+// 	case 6:
+// 		console.log("Saturday")
+// 		break
+// 	case 7:
+// 		console.log("Sunday")
+// 		break
+// 	default:
+// 		console.log("Invalid Input")
+// }
+
+
+//*************************************************************************************************************************
+
+
+// 43- Question 22 using Switch
+
+// 22- Accept an english alphabet from user and check if it is a consonent or a vowel;
+
+
+//  let alphabet = prompt("Enter the alphabet")
+
+//  switch(alphabet){
+//  	case "a":
+//  	case "e":
+//  	case "i":
+//  	case "o":
+//  	case "u":
+//  		console.log("Vowel")
+//  		break
+//  	default:
+//  		console.log("Consonent")
+//  }
