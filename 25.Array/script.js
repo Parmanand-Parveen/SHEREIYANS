@@ -36,12 +36,16 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Foreach vs map
 
+//***************************************foreach****************************************************************
+
 // console.log(arr)
 // arr.forEach((element,index) =>  {    //It is a mutable method  means it changes the original array
 //    arr[index]= element*2
 //     console.log(element,index)
 // })
 // console.log(arr)
+
+//****************************************map*******************************************************************
 
 // let arrcopy = arr.map((element,index) =>  {       //It is a immutable method that means it doesn't change the original array
 //      return element*2
@@ -51,6 +55,8 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // console.log(arrcopy)
 // console.log(arr)
 
+//*******************************************************filter*******************************************************************
+
 // let filteredData = arr.filter((element,index) =>  {       //It is a immutable method that means it doesn't change the original array
 //      return element%2==0
 //  })
@@ -58,9 +64,72 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //  console.log(filteredData)
 //  console.log(arr)
 
+//***********************************************************************find***********************************************
+
 // let filteredData = arr.find((element,index) =>  {       //It is a immutable method that means it doesn't change the original array)
 //      return element%2==0
 //   })
 
 //   console.log(filteredData)
 //   console.log(arr)
+
+//***********************************************************************findIndex***********************************************
+
+// let filteredData = arr.findIndex((element,index) =>  {       //It is a immutable method that means it doesn't change the original array)
+//      return element%2==0
+//   })
+
+
+//*********************************************************includes***************************************************************
+
+// console.log(arr.includes(5))
+
+
+//*********************************************************some******************************************************************
+
+// let x = arr.some((element,index) =>  {       
+//          return element%2==0
+//     })
+// console.log(x)
+
+
+// *********************************************************every******************************************************************
+
+
+// let y = arr.every((element,index) =>  {       
+//          return element%2==0
+//     })
+
+// console.log(y)
+
+
+// *********************************************************reduce******************************************************************
+
+
+// let sum = arr.reduce((accumulator,current) =>  {      
+     // console.log(accumulator,current)
+//     return accumulator+current
+//     },0)
+
+// console.log(sum)
+
+
+// *****************************************************Array Destructuring*****************************************************************
+
+// let [a,b,c] = arr
+// console.log(a,b,c)
+
+// let[,,,e,f,g,h] = arr
+
+// console.log(e,f,g,h)
+
+
+// *****************************************************Object Destructuring*****************************************************************
+
+// let obj = {
+//     name: "John",
+//     age: 30
+// }
+
+// let {name,age} = obj
+// console.log(name,age)
