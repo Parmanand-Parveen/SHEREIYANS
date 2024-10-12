@@ -302,12 +302,44 @@
 
 
 // 20- Shop discount - Description on Graphic
+    // if the bil is <= 1000 then 10% discount
+	// if the bil is <= 2000 then 20% discount
+	// if the bil is > 2000 then 30% discount
+
+
+	// let billamount = +prompt("Enter the bill amount")
+	// if(billamount <= 1000){
+	// 	console.log(`The total bill amount is ${billamount-(billamount*10/100)}`)
+	// }else if(billamount <= 2000){
+	// 	console.log(`The total bill amount is ${billamount-(billamount*20/100)}`)
+	// }else{
+	// 	console.log(`The total bill amount is ${billamount-(billamount*30/100)}`)
+	// }
 
 
 // *****************************************************************************************************************
 
 
 // 21- Bijli Bill - Description on Graphic
+//    1 to 100 = Rs 10
+//    100 to 200 = Rs 15
+//    200  to 300 = Rs 20
+//    >300 = Rs 25 
+
+
+// let unit = +prompt("Enter the unit")
+
+// if(unit <= 100){
+// 	console.log(`The total bill amount is ${unit*10}`)	
+// }else if(unit <= 200){
+// 	console.log(`The total bill amount is ${unit*15}`)
+// }else if(unit <= 300){
+// 	console.log(`The total bill amount is ${unit*20}`)
+// }else{
+// 	console.log(`The total bill amount is ${unit*25}`)
+// }
+
+
 
 
 // *****************************************************************************************************************
@@ -737,3 +769,137 @@
 //  	default:
 //  		console.log("Consonent")
 //  }
+
+
+//*************************************************************************************************************************
+
+
+// 44- Project - Guess Game
+//       Write a program that generates a random number and asks the user to guess what the number is.
+//       If the user's guess is higher than the random number, the program should display "Too high, try again."
+//       If the user's guess is lower than the random number, the program should display "Too low, try again."
+//       The program should use a loop that repeats until the user correctly guesses the random number.
+
+
+// let i  = Math.floor(Math.random() * 100)
+// console.log(i)
+// let j ;
+
+// do{
+// 	j = +prompt("Enter the number")
+
+// 	if(j>i){
+// 		console.log("Too high, try again")
+// 	}else if(j<i){
+// 		console.log("Too low, try again")
+// 	}else{
+// 		console.log("Correct")
+// 	}
+
+// }while(j!=i)
+
+
+//*************************************************************************************************************************
+
+
+
+// 46- Right Triangle - Star
+// 	*
+// 	* *
+// 	* * *
+// 	* * * *
+// 	* * * * *
+
+
+// for(let i = 0 ; i<5; i++){
+// 	let pattern = ""
+// 	for(let j = 0 ; j<=i ; j++){
+// 		pattern+="*"
+// 	}
+// 	console.log(pattern) 
+// }
+
+
+//************************************************************************************************************************
+
+
+// 47- Right Triangle - Number
+// 	1
+// 	1 2
+// 	1 2 3 
+// 	1 2 3 4
+// 	1 2 3 4 5
+
+
+// for(let i = 0 ; i<5; i++){
+// 	let pattern = ""
+// 	for(let j = 1 ; j<=i+1 ; j++){
+// 		pattern+=j
+// 	}
+// 	console.log(pattern) 
+// }
+
+
+//************************************************************************************************************************
+
+
+// 48- Right Triangle - Alphabet
+// 	A
+// 	A B
+// 	A B C
+// 	A B C D
+// 	A B C D E
+
+
+// for(let i = 0 ; i<5; i++){
+// 	let pattern = ""
+// 	for(let j = 0 ; j<=i ; j++){
+// 		pattern+=String.fromCharCode(65+j)
+// 	}
+// 	console.log(pattern) 
+// }
+
+
+//************************************************************************************************************************
+
+// 49- Inverted Right Triangle
+// 	* * * * *
+// 	* * * *
+// 	* * *
+// 	* *
+// 	*
+
+
+// let n = +prompt("Enter the number")
+
+// for(let i = 0 ; i<n; i++){
+// 	let pattern = ""
+// 	for(let j = 0 ; j<n-i ; j++){
+// 		pattern+="*"
+// 	}
+// 	console.log(pattern) 
+// }
+
+
+//************************************************************************************************************************
+
+
+// 50- Mirrored Right Triangle
+// 	        *
+// 	      * *
+// 	    * * *
+// 	  * * * *
+// 	* * * * *
+
+// let n = +prompt("Enter the number") 
+
+// for(let i = 0 ; i<n; i++){
+// 	let pattern = ""
+// 	for(let j = 0 ; j<n-i ; j++){
+// 		pattern+=" "
+// 	}
+// 	for(let j = 0 ; j<=i ; j++){
+// 		pattern+="*"
+// 	}
+// 	console.log(pattern) 
+// }
