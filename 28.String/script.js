@@ -18,7 +18,7 @@
 
 //String traversal
 
-let s = "Hello world"
+// let s = "Hello world"
 
 // for(let i=0;i<s.length;i++){
 //     console.log(`Alphabet at index ${i} is ${s[i]}`)
