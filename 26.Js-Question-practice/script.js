@@ -975,3 +975,67 @@
 //  }
 //  console.log(pattern)
 // }
+
+
+//************************************************************************************************************************
+
+
+// 54- Accept size n from user and create a n size array then take n inputs into the and finally 
+//       Print the sum & Avg of all elements.
+
+
+// let n = +prompt("Enter the number")
+
+// let arr = []
+// for(let i = 0 ; i<n; i++){
+// 	arr[i] = +prompt("Enter the number")
+// }
+
+// let sum = arr.reduce((a,b)=>a+b,0)
+// let avg =(sum/n).toFixed(1)
+// console.log(`The number you entered is ${arr} and the sum is ${sum} and the avg is ${avg}`)
+
+
+//************************************************************** *************************************************************
+
+
+// 55- Find the greatest element.
+//       {2, 96, 69, 77, 145, 20} = Max element = 145 found at 4 index
+
+// Method 1 using inbuilt function
+// let ans = Math.max(2, 96, 69, 77, 145, 20)
+// console.log(ans)
+
+// Method 2 
+
+// let arr = [2, 96, 69, 77, 145, 20]
+// let max = arr[0]
+// for(let i = 1 ; i<arr.length ; i++){
+// 	if(arr[i]>max){
+// 		max = arr[i]
+// 	}
+// }
+// console.log(max)
+
+
+//***************************************************************************************************************************
+
+
+// 56- Find the second greatest element 
+//       {2, 96, 69, 77, 145, 20} = Second greatest element = 96
+
+
+// let arr = [2, 96, 69, 77, 145, 20]
+
+// for(let i = 0 ; i<arr.length ; i++){
+//     for(let j = i+1 ; j<arr.length ; j++){
+// 		if(arr[i]>arr[j]){
+// 			let temp = arr[i]
+// 			arr[i] = arr[j]
+// 			arr[j] = temp
+// 		}
+// 	}
+// }
+
+// console.log(arr.at(-2))
+
