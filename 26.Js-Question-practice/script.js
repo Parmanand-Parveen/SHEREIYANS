@@ -1009,13 +1009,13 @@
 // Method 2 
 
 // let arr = [2, 96, 69, 77, 145, 20]
-// let max = arr[0]
-// for(let i = 1 ; i<arr.length ; i++){
-// 	if(arr[i]>max){
-// 		max = arr[i]
+// let max = 0
+// arr.forEach((e,i)=>{
+// 	if(e>arr[max]){
+// 		max = i
 // 	}
-// }
-// console.log(max)
+//  })
+// console.log(arr[max],max)
 
 
 //***************************************************************************************************************************
