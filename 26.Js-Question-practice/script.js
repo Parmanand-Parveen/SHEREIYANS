@@ -1042,4 +1042,127 @@
 
 //***************************************************************************************************************************
 
+// 57- Check if array is sorted in increasing order or not.
+//        Ex 1 - { 1, 5, 8,  9, 10, 15 } - OP = "YES"
+//        Ex 2 - { 1, 8, 6, 9, 10, 15 } - OP = "NO"
 
+// let arr = [1, 6, 9, 10, 15]
+
+// let flag = true
+
+// arr.forEach((e,i)=>{
+// 	if(e>arr[i+1]){
+// 		flag = false
+// 	}
+// })
+
+// console.log(flag)
+
+
+//************************************************************************************************************************
+
+
+// 58- Take n integer inputs from user and store them in an array. 
+//        Now, copy all the elements in an another array but in reverse order and print it.
+
+
+// let n = +prompt("Enter the length of the array")
+
+// let arr = []
+
+// for(let i = 0 ; i<n ; i++){
+// 	arr[i] = +prompt("Enter the number")
+// }
+
+// let arr2 = arr.reverse()
+// console.log(arr2)
+
+
+//************************************************************************************************************************
+
+
+// 59- Array left Rotation by 1
+
+
+// let arr = [1,2,3,4,5]
+ 
+// let temp = arr[0]
+// for(let i = 0 ; i<arr.length-1 ; i++){
+// 	arr[i] = arr[i+1]
+// }
+// arr[arr.length-1] = temp
+// console.log(arr)
+//************************************************************************************************************************
+
+
+// 60- Array left rotation by K elements
+
+// let arr = [1,2,3,4,5]
+
+// let k = 4
+
+// for(let i = 0 ; i<k ; i++){
+// 	let temp = arr[0]
+// 	for(let j = 0 ; j<arr.length-1 ; j++){
+// 		arr[j] = arr[j+1]
+// 	}
+// 	arr[arr.length-1] = temp
+// }
+// console.log(arr)
+
+
+//************************************************************************************************************************
+
+
+// 61- Array Reverse Without Using Extra space
+
+
+
+//************************************************************************************************************************
+
+
+// 62- Linear Search an array - If element found print the index else -1
+
+// let arr = [1,2,3,4,5,6,7,8,9,10]
+
+// let target = 9
+
+// let flag = -1
+
+// arr.forEach((e,i)=>{
+// 	if(e == target){
+// 		flag = i
+// 	}
+// })
+
+// console.log(flag)
+
+
+//************************************************************************************************************************
+
+
+// 63- Binary Search. If element found print the index else -1
+
+// let arr = [1,2,3,4,5,6,7,8,9,10]
+// let target = 12
+
+// let s = 0
+// let e = arr.length-1
+// let mid = 0
+// let flag = -1
+// while(s<=e){
+// 	mid = Math.floor((s+e)/2)
+// 	if(arr[mid] == target){
+// 		flag = mid
+// 		break
+// 	}else if(arr[mid] > target){
+// 		e = mid-1
+// 	}else{
+// 		s = mid+1
+// 	}
+// }
+
+// console.log(flag)
+
+
+//************************************************************************************************************************
