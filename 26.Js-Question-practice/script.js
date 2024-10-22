@@ -1166,3 +1166,66 @@
 
 
 //************************************************************************************************************************
+
+
+// 64- Bubble Sort. 
+
+// let arr = [10, 7, 8, 9, 1, 5]
+
+// for(let i = 0 ; i<arr.length-1 ; i++){
+// 	for(let j = 0 ; j<arr.length-i-1 ; j++){
+// 		if(arr[j]>arr[j+1]){
+// 			let temp = arr[j]
+// 			arr[j] = arr[j+1]
+// 			arr[j+1] = temp
+// 		}
+// }}
+
+// console.log(arr)
+
+
+//************************************************************************************************************************
+
+
+// 65- Move all the negative elements on left side and positive elements on right side O(n).
+
+
+// let arr = [-1, 2, -4, 5, 6, -7, 8, -9, 10]
+
+// for(let i = 0 ; i<arr.length ; i++){
+// 	if(arr[i]<0){
+// 		arr.unshift(arr[i])
+// 		arr.splice(i+1,1)
+// 	}
+// }
+
+// console.log(arr)
+
+
+//************************************************************************************************************************
+
+
+// 66- Print the count of subarrays whose sum is equal to the target.
+// 	Ex - {1,2,3,7,5}, T = 12  O/P - 2 - [ {2,3,7}, {7,5} ] - Both the subarrays has sum 12 
+
+// let arr = [1,2,3,7,5]
+
+// let target = 12
+
+// let count = 0
+// let sum = 0
+// let i = 0
+// let j = 0
+// while(j<arr.length){
+// 	sum += arr[j]
+// 	while(sum>target){
+// 		sum -= arr[i]
+// 		i++
+// 	}
+// 	if(sum == target){
+// 		count++
+		
+// 	}
+// 	j++
+// }
+// console.log(count)
