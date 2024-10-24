@@ -1229,3 +1229,156 @@
 // 	j++
 // }
 // console.log(count)
+
+
+//************************************************************************************************************************
+
+
+//67- Strong number using methods
+
+
+// let num = 145 
+// let temp = num
+// let sum = 0
+
+// function fact(n){
+// 	let fact = 1
+// 	for(let i = 1 ; i<=n ; i++){
+// 		fact *= i
+// 	}
+// 	return fact
+// }
+
+// while(num>0){
+// 	let rem = num%10
+// 	sum += fact(rem)
+// 	num = Math.floor(num/10)
+// }
+// if(sum == temp){
+// 	console.log("Strong Number")
+// }else{
+// 	console.log("Not Strong Number")
+
+// }
+	
+
+
+
+// console.log(sum==temp ? "Strong Number" : "Not Strong Number")
+ 
+
+//************************************************************************************************************************
+
+
+// 68- Special number using methods.
+
+
+//************************************************************************************************************************
+
+
+// 69- Leetcode 1929 - Concatenation of array 
+
+// Given an integer array nums of length n, you want to create an array ans of length 2n where ans[i] == nums[i] and ans[i + n] == nums[i] for 0 <= i < n (0-indexed).
+
+// Specifically, ans is the concatenation of two nums arrays.
+
+// Return the array ans.
+
+
+// let hero = [1,2,3]
+
+
+// // let ans=arr.concat(arr) 
+
+// function concat(arr){
+// 	let ans = []
+// 	for(let i = 0 ; i<arr.length ; i++){
+// 		ans.push(arr[i])
+// 	}
+// 	ans = [...arr,...ans]
+// 	return ans
+// }
+
+// console.log(concat(hero))
+
+
+//************************************************************************************************************************
+
+
+// 70- Leetcode 1920 - Build Array from Permutation
+
+
+//************************************************************************************************************************
+
+// 71- Accept a string from user and print its each character on a new line
+
+// let s  = prompt("Enter the string")
+
+
+// s.split("").forEach((value)=>console.log(value))
+
+
+//************************************************************************************************************************
+
+
+// 72- Accept a string and print it in reverse order
+
+// let s = prompt("Enter the string")
+
+// s.split("").reverse().forEach((value)=>console.log(value))
+
+
+//************************************************************************************************************************
+
+
+// 73- Check if the string is Pallindromic or not
+
+// let s = prompt("Enter the string")
+
+
+// let check  =  s.split("").reverse().join("")
+
+
+
+// console.log(s==check? "Pallindromic":"Not Pallindromic")
+
+
+//************************************************************************************************************************
+
+
+// 74- Pallindromic String using method and Two pointer algorithm (hint: Array reverse algo)
+
+
+// let string = prompt("Enter the string")
+
+
+// function checkStringPalindrom(s){
+// 	let flag = true
+
+// 	for(let i = 0 ; i<s.length ; i++){
+// 		let left = i
+// 		let right = s.length-i-1
+// 		while(left<right){
+// 			if(s[left] != s[right]){
+// 				flag = false
+// 				break
+// 			}
+// 			left++
+// 			right--
+// 		}
+	
+// 	}
+// 	console.log(flag? "Pallindromic":"Not Pallindromic")
+// }
+
+
+
+// checkStringPalindrom(string)
+
+
+//************************************************************************************************************************
+
+
+// 77- Take an array of strings words and a String Prefix. Print the number of strings in words that contain pref as a prefix.
+//        Example - Input: words = ["pay","attention","practice","attend"], pref = "at"
+//                         Output: 2
