@@ -1382,3 +1382,43 @@
 // 77- Take an array of strings words and a String Prefix. Print the number of strings in words that contain pref as a prefix.
 //        Example - Input: words = ["pay","attention","practice","attend"], pref = "at"
 //                         Output: 2
+
+// let words = ["pay","attention","practice","attend"]
+// let pref = "at"
+
+// let count = 0
+// words.forEach((e)=>{
+// 	if(e.includes(pref)){
+// 		console.log(e)
+//           count++
+// 	}
+// })
+
+
+//************************************************************************************************************************
+
+
+// 78- Accept a space seperated sentence and split in into words. Print each word on a new line with first letter capitalized.
+//       IN-      Hello bhai kaise ho
+//       OP-     Hello
+//                  Bhai
+//                  Kaise
+//                  Ho
+
+
+// let sentence = "hello bhaiyo kaise ho"
+
+// sentence.split(" ").forEach((e)=>{console.log(e[0].toUpperCase()+e.slice(1))})
+   
+
+//************************************************************************************************************************
+
+
+// 79- Extend the prev question and capitalize first & last character of each word in the sentence and print the new sentence
+//       Ex - 	Hello bhai Kaise ho a
+// 	HellO BhaI KaisE HO A
+
+// let sentence = "hello bhaiyo kaise ho"
+
+
+// sentence.split(" ").forEach((e)=>{console.log(e[0].toUpperCase()+e.slice(1,-1)+e[e.length-1].toUpperCase())})
