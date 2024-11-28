@@ -46,7 +46,7 @@
 
 // console.log("Arrow function")
 
-// TODO: Normal function vs arrow function in javascript
+//Normal function vs arrow function in javascript
 // const greetArrow = ()=>{
 //     console.log(this)
 //     // console.log(arguments)

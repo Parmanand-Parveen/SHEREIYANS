@@ -25,7 +25,6 @@
 //         // code block
 // }
 
-// TODO
 // What is fall throw
 
 // let name =  prompt("Enter Your Name")
