@@ -54,3 +54,17 @@ tl.from("#page2 .card",{
         scrub:1
     }
 })
+
+gsap.to("#page3 h1",{
+    x:-2500,
+
+    scrollTrigger:{
+        trigger: "#page3",  
+        scroller:"body",
+        start:"top 0%",
+        end:"top -100%",
+        markers:true,
+        scrub:1,
+        pin:true
+    }
+})
