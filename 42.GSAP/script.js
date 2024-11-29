@@ -39,3 +39,18 @@ tl.from(".right img",{
     x:100,
     scale:0
 })
+
+
+tl.from("#page2 .card",{
+    duration:1.5,
+    y:-200,
+    opacity:0,
+    stagger:0.5,
+    scrollTrigger:{
+        trigger: "#page2",
+        scroller:"body",
+        start:"top 45%",
+        end:"top 10%",
+        scrub:1
+    }
+})
