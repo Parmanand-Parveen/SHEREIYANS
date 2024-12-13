@@ -3,7 +3,6 @@ import {useForm} from "react-hook-form"
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
   const {register,handleSubmit,formState:{errors}}= useForm(
    {
     defaultValues:{
