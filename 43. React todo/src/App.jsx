@@ -18,6 +18,8 @@ function App() {
 
   return (
     <div>
+
+    <h1 className='head'>External css from app</h1>
     <Search taskdata={taskdata}/>
       <Input taskdata={taskdata}  settaskdata={settaskdata}/>
       

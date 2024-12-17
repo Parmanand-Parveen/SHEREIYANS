@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Show.css"
 
 function Show(props) {
      const taskdata = props.taskdata
@@ -22,9 +23,19 @@ function Show(props) {
     </h1>
   })
 
+  const headCss = {
+    color:"white"
+  }
+
   return (
      <div className="bg-zinc-800 w-1/2 p-3 mx-auto">
+      { /*inlinecss*/}
+     <h1 style={{color:"white"}} >Inline css</h1>
+       
+     <h1 style={headCss} >Internal css</h1>
      {renderTask}
+
+     <h1 className='head'>External css</h1>
      
        
      </div>
