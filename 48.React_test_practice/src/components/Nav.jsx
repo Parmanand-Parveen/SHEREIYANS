@@ -12,7 +12,7 @@ function Nav() {
 
         {/* Hamburger Menu for Mobile */}
         <button
-          className="md:hidden  text-white focus:outline-none"
+          className="md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
@@ -33,8 +33,8 @@ function Nav() {
 
         {/* Links */}
         <div
-          className={`md:flex bg-gray-700 top-10 absolute w-1/2 right-0  md:items-center md:space-x-4 ${
-            isOpen ? "block" : "hidden"
+          className={`md:flex md:items-center top-10  md:space-x-4 ${
+            isOpen ? "block absolute w-1/2 right-0 bg-slate-900" : "hidden"
           } w-full md:w-auto`}
         >
           <NavLink
