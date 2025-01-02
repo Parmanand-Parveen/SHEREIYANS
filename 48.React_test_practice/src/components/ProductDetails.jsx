@@ -1,26 +1,22 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getProduct, getProductDetails } from '../Store/Slices/ProductSlice';
-import { useNavigate, useParams } from 'react-router';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteItem } from "../Store/Slices/ProductSlice";
+import { useNavigate, useParams } from "react-router";
 
 function ProductDetails() {
-  const navigate = useNavigate();
-  const { getDetails } = useSelector((state) => state.product);
-
   const params = useParams();
+  const navigate = useNavigate();
+  const { product } = useSelector((state) => state.product);
 
+  const getDetails = product.find((item) => item.id == params?.id);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getProductDetails(params?.id));
-  }, [dispatch, params?.id]);
 
   const back = () => {
     navigate(-1);
-    dispatch(getProduct());
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen p-6">
+    <div className="bg-gray-100 min-h-screen p-8">
       {/* Back Button */}
       <div className="mb-6">
         <button
@@ -32,34 +28,60 @@ function ProductDetails() {
       </div>
 
       {/* Product Details Section */}
-       {getDetails.title ?(      <div className="max-w-4xl mx-auto bg-white flex flex-col md:flex-row rounded-lg shadow-md overflow-hidden">
-        <img
-          src={getDetails?.image}
-          alt={getDetails?.title}
-          className="w-full md:w-1/2 h-64 md:h-auto object-cover"
-        />
-        <div className="p-6 flex-1 flex flex-col justify-between">
-          <div>
+      {getDetails ? (
+        <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+          {/* Image Section */}
+          <div className="relative h-64 md:h-80 bg-gray-200">
+            <img
+              src={getDetails.image}
+              alt={getDetails.title}
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* Details Section */}
+          <div className="p-6">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">
-              {getDetails?.title}
+              {getDetails.title}
             </h1>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              {getDetails?.description}
+            <p className="text-gray-600 text-lg mb-4 leading-relaxed">
+              {getDetails.description}
             </p>
-            <div className="flex items-center space-x-4 mb-6">
-              <p className="text-yellow-500 text-lg font-semibold">
-                ★ {getDetails?.rating?.rate}
-              </p>
-              <p className="text-gray-600 text-sm">
-                ({getDetails?.rating?.count} reviews)
-              </p>
+            <div className="flex items-center space-x-4 mb-4">
+              <span className="text-yellow-500 text-lg font-medium">
+                ★ {getDetails.rating?.rate}
+              </span>
+              <span className="text-gray-500 text-sm">
+                ({getDetails.rating?.count} reviews)
+              </span>
+            </div>
+            <h2 className="text-2xl font-semibold text-green-600 mb-6">
+              ${getDetails.price}
+            </h2>
+
+            {/* Action Buttons */}
+            <div className="flex space-x-4">
+              <button
+                onClick={() => navigate(`/editproduct/${getDetails.id}`)}
+                className="px-6 py-2 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 transition"
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => {
+                  dispatch(deleteItem(getDetails.id));
+                  navigate(-1);
+                }}
+                className="px-6 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 transition"
+              >
+                Delete
+              </button>
             </div>
           </div>
-          <button className="w-full px-6 py-3 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition">
-            Buy Now
-          </button>
         </div>
-      </div>):("Loading...")}
+      ) : (
+        <div className="text-center text-gray-500 text-lg">Loading...</div>
+      )}
     </div>
   );
 }

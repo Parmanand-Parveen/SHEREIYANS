@@ -1,20 +1,21 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "../../utils/axiosConfige";
 
+
 const initialState = {
-  product: [],
+  product: JSON.parse(localStorage.getItem("product")),
   getDetails: {},
 };
 
-export const getProduct = createAsyncThunk("/product", async () => {
-  try {
-    const allProduct = await axios.get("/products");
-    return allProduct.data;
-  } catch (error) {
-    console.log("Get error while fetching all the product", error);
-  }
-});
-
+// export const getProduct = createAsyncThunk("/product", async () => {
+//   try {
+//     const allProduct = await axios.get("/products");
+//     return allProduct.data;
+//   } catch (error) {
+//     console.log("Get error while fetching all the product", error);
+//   }
+// });
+ 
 
 export const getProductDetails = createAsyncThunk("/product/productdetails", async (id) => {
   try {
@@ -28,21 +29,27 @@ export const getProductDetails = createAsyncThunk("/product/productdetails", asy
  const productSlice = createSlice({
   name: "Product",
   initialState,
-  reducers: {},
+  reducers: {
+     deleteItem :(state, action)=>{
+      state.product = state.product.filter((item) => item.id !== action.payload)
+      localStorage.setItem("product", JSON.stringify(state.product))
+     },
+     addNewProduct :(state, action)=>{
+      state.product.push(action.payload)
+      localStorage.setItem("product", JSON.stringify(state.product))
+     },
+     editProduct :(state, action)=>{
+      console.log(action.payload)
+      state.product = state.product.map((item) => item.id === action.payload.id ? action.payload : item)
+      localStorage.setItem("product", JSON.stringify(state.product))
+     }
+     
+
+
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(getProduct.rejected, (state) => {
-        state.product = [];
-        state.getDetails = {};
-      })
-      .addCase(getProduct.pending, (state) => {
-        state.product = [];
-        state.getDetails = {};
-      })
-      .addCase(getProduct.fulfilled,(state, action)=>{
-        state.product = action.payload,
-        state.getDetails = {}
-      }).addCase(getProductDetails.rejected, (state) => {
+     .addCase(getProductDetails.rejected, (state) => {
         state.getDetails = {};
       })
       .addCase(getProductDetails.pending, (state) => {
@@ -53,5 +60,9 @@ export const getProductDetails = createAsyncThunk("/product/productdetails", asy
       });
   },
 });
+
+
+
+export const {deleteItem,addNewProduct,editProduct} = productSlice.actions
 
 export default productSlice.reducer
