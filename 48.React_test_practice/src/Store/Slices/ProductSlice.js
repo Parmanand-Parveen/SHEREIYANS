@@ -2,7 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "../../utils/axiosConfige";
 
 const initialState = {
-  product: [
+  product: JSON.parse(localStorage.getItem("product")) ||
+   [
     {
       id: 1,
       title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -273,14 +274,14 @@ const initialState = {
   getDetails: {},
 };
 
-// export const getProduct = createAsyncThunk("/product", async () => {
-//   try {
-//     const allProduct = await axios.get("/products");
-//     return allProduct.data;
-//   } catch (error) {
-//     console.log("Get error while fetching all the product", error);
-//   }
-// });
+export const getProduct = createAsyncThunk("/product", async () => {
+  try {
+    const allProduct = await axios.get("/products");
+    return allProduct.data;
+  } catch (error) {
+    console.log("Get error while fetching all the product", error);
+  }
+});
 
 export const getProductDetails = createAsyncThunk(
   "/product/productdetails",
@@ -305,8 +306,10 @@ const productSlice = createSlice({
       localStorage.setItem("product", JSON.stringify(state.product));
     },
     addNewProduct: (state, action) => {
+      console.log(action.payload)
       state.product.push(action.payload);
       localStorage.setItem("product", JSON.stringify(state.product));
+      
     },
     editProduct: (state, action) => {
       console.log(action.payload);
@@ -318,6 +321,9 @@ const productSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+    .addCase(getProduct.fulfilled, (state, action) => {
+       state.product = action.payload
+    })
       .addCase(getProductDetails.rejected, (state) => {
         state.getDetails = {};
       })
@@ -331,5 +337,4 @@ const productSlice = createSlice({
 });
 
 export const { deleteItem, addNewProduct, editProduct } = productSlice.actions;
-
 export default productSlice.reducer;

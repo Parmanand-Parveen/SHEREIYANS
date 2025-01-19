@@ -6,15 +6,14 @@ function Product() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const product = useSelector((state) => state.product);
+  console.log(product)
   const [data, setdata] = useState([]);
 
   const getDetails = (id) => {
     navigate(`/product/${id}`);
   };
 
-  useEffect(() => {
-    localStorage.setItem("product", JSON.stringify(product.product));
-  }, [product.product]);
+ 
 
   const getCategoryfilteredData = (item) => {
     const filteredData = product.product.filter(
@@ -23,7 +22,7 @@ function Product() {
     setdata(filteredData);
   };
 
-  const category = product.product.map((item) => item.category);
+  const category =product && product.product.map((item) => item.category);
   const categoryFilter = [...new Set(category)];
 
   return (

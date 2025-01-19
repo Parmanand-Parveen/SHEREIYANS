@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router";
+import { getProduct } from "../Store/Slices/ProductSlice";
+import { useSelector } from "react-redux";
 
 function Home() {
+
+ 
+
+
   return (
     <div className="bg-gray-50 min-h-screen flex items-center justify-center py-12 px-6">
       <div className="text-center max-w-4xl">

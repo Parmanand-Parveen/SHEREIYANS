@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate()
 
   return (
     <nav className="bg-gray-800 text-white shadow-md">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-xl font-bold">MyWebsite</div>
+        <div className="text-xl font-bold cursor-pointer" onClick={() => navigate("/")}>MyWebsite</div>
 
         {/* Hamburger Menu for Mobile */}
         <button

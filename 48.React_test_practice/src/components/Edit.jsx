@@ -5,7 +5,7 @@ import { editProduct } from "../Store/Slices/ProductSlice";
 // import { updateProduct } from "../Store/Slices/ProductSlice"; // Adjust based on your Redux setup
 
 function Edit() {
-  const { id } = useParams(); // Fetch product ID from the URL
+  const { id } = useParams(); 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -35,7 +35,7 @@ function Edit() {
         description: product.description,
         category: product.category,
         image: product.image,
-         rating:{
+        rating:{
            rate: product.rating.rate,
           count: product.rating.count}
       });
@@ -44,7 +44,7 @@ function Edit() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(editProduct(formData)); // Replace `updateProduct` with your update logic
+    dispatch(editProduct(formData));
     navigate("/product");
   };
 
