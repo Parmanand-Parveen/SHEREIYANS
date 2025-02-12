@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div>
-      <ToastContainer />
+      <ToastContainer position="bottom-right"/>
       <Nav />
       <div className="min-h-screen">
       <Routes>

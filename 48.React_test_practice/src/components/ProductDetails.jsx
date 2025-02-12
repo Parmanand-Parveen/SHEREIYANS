@@ -2,6 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteItem } from "../Store/Slices/ProductSlice";
 import { useNavigate, useParams } from "react-router";
+import { addToCart } from "../Store/Slices/CartSlice";
+import { toast } from "react-toastify";
 
 function ProductDetails() {
   const params = useParams();
@@ -15,6 +17,12 @@ function ProductDetails() {
     navigate(-1);
   };
 
+  const add = (item)=>{
+    dispatch(addToCart(item))
+    toast(`${item.title} is added to cart`)
+    navigate("/cart")
+  }
+  
   return (
     <div className="bg-gray-100 min-h-screen p-8">
       {/* Back Button */}
@@ -61,6 +69,12 @@ function ProductDetails() {
 
             {/* Action Buttons */}
             <div className="flex space-x-4">
+            <button
+                    onClick={() => add(getDetails)}
+                    className="px-4 py-1 bg-blue-500 text-white text-sm rounded hover:bg-green-600 transition"
+                  >
+                    Add to cart
+                  </button>
               <button
                 onClick={() => navigate(`/editproduct/${getDetails.id}`)}
                 className="px-6 py-2 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 transition"
