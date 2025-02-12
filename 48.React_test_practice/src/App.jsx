@@ -9,12 +9,15 @@ import Footer from "./components/Footer";
 import ProductDetails from "./components/ProductDetails";
 import AddProduct from "./components/AddProduct";
 import Edit from "./components/Edit";
+import Cart from "./components/Cart";
+import {ToastContainer} from "react-toastify"
 
 function App() {
   
 
   return (
     <div>
+      <ToastContainer />
       <Nav />
       <div className="min-h-screen">
       <Routes>
@@ -25,6 +28,7 @@ function App() {
       <Route path="/addproduct" element={<AddProduct />} />
       <Route path="/editproduct/:id" element={<Edit />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/cart"  element={<Cart/>} />
     </Routes>
       </div>
       <Footer/>

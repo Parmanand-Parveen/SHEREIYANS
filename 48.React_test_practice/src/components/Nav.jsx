@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate()
+  const {cartItem} = useSelector(state => state.cart)
 
   return (
     <nav className="bg-gray-800 text-white shadow-md">
@@ -77,6 +79,17 @@ function Nav() {
             }
           >
             Contact
+          </NavLink>
+          <NavLink
+            to="/cart"
+            className={({ isActive }) =>
+              `block md:inline px-3 py-2 rounded-lg w-16 text-sm font-medium hover:bg-gray-700 transition relative ${
+                isActive ? "bg-gray-700" : ""
+              }`
+            }
+          >
+           Cart 
+          {cartItem.length > 0 ?<p className="rounded-full h-5 w-5 bg-orange-500 flex justify-center items-center  text-white absolute top-2 right-0">{cartItem.length}</p> : ""}
           </NavLink>
         </div>
       </div>

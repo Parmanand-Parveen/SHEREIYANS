@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import { addToCart } from "../Store/Slices/CartSlice";
+import { toast } from "react-toastify";
 
 function Product() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const product = useSelector((state) => state.product);
-  console.log(product)
   const [data, setdata] = useState([]);
 
   const getDetails = (id) => {
@@ -21,6 +22,12 @@ function Product() {
     );
     setdata(filteredData);
   };
+
+  const add = (item)=>{
+    dispatch(addToCart(item))
+    toast(`${item.title} is added to cart`)
+    navigate("/cart")
+  }
 
   const category =product && product.product.map((item) => item.category);
   const categoryFilter = [...new Set(category)];
@@ -98,12 +105,20 @@ function Product() {
                       ({item.rating?.count? `${item.rating?.count} reviews` : ""} )
                     </span>
                   </div>
+                 <div className="flex gap-3">
+                 <button
+                    onClick={() => add(item)}
+                    className="px-4 py-1 bg-blue-500 text-white text-sm rounded hover:bg-green-600 transition"
+                  >
+                    Add to cart
+                  </button>
                   <button
                     onClick={() => getDetails(item.id)}
                     className="px-4 py-1 bg-green-500 text-white text-sm rounded hover:bg-green-600 transition"
                   >
                     Get Details
                   </button>
+                 </div>
                 </div>
               </div>
             </div>
