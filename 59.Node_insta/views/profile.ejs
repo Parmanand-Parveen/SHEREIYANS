@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>User Profile</title>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        
+        <!-- Profile Section -->
+        <div class="flex items-center flex-wrap  justify-between border-b pb-4">
+            <div class="flex items-center gap-4">
+                <img class="w-20 h-20 rounded-full border-2 border-gray-300" src="<%= user.profilepic %>" alt="Profile Picture">
+                <h1 class="text-2xl font-semibold text-gray-800">Hello, <span class="uppercase"><%= user.username %> 👋</span></h1>
+            </div>
+            <a class="py-2 mt-3 px-4 text-white font-medium rounded-md bg-red-600 hover:bg-red-700 transition shadow-md active:shadow-inner" href="/auth/logout">
+                Logout
+            </a>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="mt-6 flex gap-4">
+            <a href="/post/getallpost" class="px-4 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 transition">
+                View Feed
+            </a>
+            <a href="/post/create" class="px-4 py-2 bg-green-600 text-white rounded-md shadow-md hover:bg-green-700 transition">
+                Create Post
+            </a>
+        </div>
+
+        <!-- User's Posts -->
+        <h2 class="mt-8 text-xl font-semibold text-gray-800">Your Posts</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
+            <% posts.map((post) => { %>
+                <div class="bg-white p-4 rounded-lg shadow-2xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img class="w-10 h-10 rounded-full border shadow-inner shadow-gray-500 p-1 border-gray-300" src="<%= user.profilepic %>" alt="User Profile">
+                        <p class="text-gray-700  font-medium"><%= user.username %></p>
+                    </div>
+                    <div class="overflow-hidden w-full h-56 rounded-md">
+                        <img class="w-full h-56 object-cover rounded-md mb-3 border hover:scale-110 transition-all" src="<%= post.content %>" alt="Post Image">
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex justify-center gap-1">
+                            <i class="ri-heart-fill text-red-600"></i>
+                            <i class="ri-chat-3-fill"></i>
+                            <i class="ri-send-plane-fill"></i>
+                        </div>
+                        <div><i class="ri-bookmark-fill"></i></div>
+                    </div>
+                    <p class="text-gray-600"><%= post.caption %></p>
+                </div>
+            <% }) %>
+        </div>
+
+    </div>
+</body>
+</html>

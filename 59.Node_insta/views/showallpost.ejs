@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Document</title>
+</head>
+<body class="p-4">
+    <a class="text-blue-600" href="/user/profile"><i class="ri-arrow-left-fill"></i> Back</a>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-4">
+        <% posts.map((post) => { %>
+            <div class="bg-white p-4 rounded-lg shadow-2xl">
+                <div class="flex items-center gap-3 mb-4">
+                    <img class="w-10 h-10 rounded-full border shadow-inner shadow-gray-500 p-1 border-gray-300" src="<%= post.author.profilepic %>" alt="User Profile">
+                    <p class="text-gray-700  font-medium"><%= post.author.username %></p>
+                </div>
+                <div class="overflow-hidden w-full h-56 rounded-md">
+                    <img class="w-full h-56 object-cover rounded-md mb-3 border hover:scale-110 transition-all" src="<%= post.content %>" alt="Post Image">
+                </div>
+                <div class="flex justify-between">
+                    <div class="flex justify-center gap-1">
+                        <i class="ri-heart-fill text-red-600"></i>
+                        <i class="ri-chat-3-fill"></i>
+                        <i class="ri-send-plane-fill"></i>
+                    </div>
+                    <div><i class="ri-bookmark-fill"></i></div>
+                </div>
+                <p class="text-gray-600"><%= post.caption %></p>
+            </div>
+        <% }) %>
+    </div>
+   
+</body>
+</html>
