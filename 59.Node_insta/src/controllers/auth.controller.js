@@ -37,9 +37,7 @@ export const registerUser = async (req, res) => {
    },process.env.JWT_SECRET_KEY)
 
    res.cookie("token", token)
-
-
-   res.render("profile", { user })
+   res.redirect("/user/profile")
 }
 
 

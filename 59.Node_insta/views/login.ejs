@@ -10,8 +10,8 @@
     
     <form class="flex border-2 opacity-100 bg-violet-400 rounded-2xl p-6 gap-4  shadow-violet-500 shadow-2xl flex-col" action="/auth/login" method="post">
         <p class="text-2xl">Login</p>
-        <input class="bg-violet-300 p-2 rounded-md inset-9 outline-none shadow-inner shadow-violet-800" type="text" name="email" placeholder="Example@example.com">
-        <input class="bg-violet-300 p-2 rounded-md inset-9 outline-none shadow-inner shadow-violet-800" type="password" name="password" placeholder="********">
+        <input required class="bg-violet-300 p-2 rounded-md inset-9 outline-none shadow-inner shadow-violet-800" type="text" name="email" placeholder="Example@example.com">
+        <input required class="bg-violet-300 p-2 rounded-md inset-9 outline-none shadow-inner shadow-violet-800" type="password" name="password" placeholder="********">
         <button class="bg-violet-600 text-white py-2 rounded-md  hover:shadow-xl">Login</button>
         <p>Don't have an account? <span class=""><a href="/auth/register">Register</a></span></p>
     </form>

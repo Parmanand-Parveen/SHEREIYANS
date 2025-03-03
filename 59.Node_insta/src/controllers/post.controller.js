@@ -23,7 +23,7 @@ export const createPost = async (req, res) => {
 
         const updateUser = await userModel.findOneAndUpdate({ _id: user.id }, { $push: { posts: post._id } })
 
-         res.render("profile")
+         res.redirect("/user/profile")
     } catch (error) {
         console.log("Some error in create post controller :=>", error)
         res.send(500).json({ success: false, message: "Internal server error" })

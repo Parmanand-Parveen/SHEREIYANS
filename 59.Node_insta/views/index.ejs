@@ -6,19 +6,52 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Home Page</title>
 </head>
-<body>
-    <nav class="flex justify-between px-6 py-4 bg-gray-400 min-w-screen">
-         <div>Instabuddy</div>
-         <div class="flex gap-3">
-           <div>Home</div>
-           <div>Feed</div>
-           <div>Reels</div>
-         </div>
-         <div>
-          <a class="" href="/auth/login">Login</a>
-          <a href="/auth/register">Register</a>
-         </div>
-    </nav>
-    <main></main>
+<body class="bg-gray-100">
+  <nav class="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="text-xl font-bold">Instabuddy</div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="block md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <ul id="menu" class="hidden md:flex gap-4">
+          <li><a href="#" class="hover:text-gray-300">Home</a></li>
+          <li><a href="#" class="hover:text-gray-300">Feed</a></li>
+          <li><a href="#" class="hover:text-gray-300">Reels</a></li>
+      </ul>
+
+      <!-- Login & Register -->
+      <div class="hidden md:flex gap-4">
+          <a href="/auth/login" class="px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600">Login</a>
+          <a href="/auth/register" class="px-4 py-2 bg-green-500 rounded-lg hover:bg-green-600">Register</a>
+      </div>
+  </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-gray-800 text-white py-4">
+      <a href="#" class="py-2 hover:text-gray-300">Home</a>
+      <a href="#" class="py-2 hover:text-gray-300">Feed</a>
+      <a href="#" class="py-2 hover:text-gray-300">Reels</a>
+      <a href="/auth/login" class="py-2 text-blue-400 hover:text-blue-500">Login</a>
+      <a href="/auth/register" class="py-2 text-green-400 hover:text-green-500">Register</a>
+  </div>
+
+  <main class="p-6">
+      <!-- Content goes here -->
+  </main>
+
+  <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+      });
+  </script>
 </body>
 </html>
