@@ -16,7 +16,7 @@
         <!-- Profile Section -->
         <div class="flex items-center flex-wrap  justify-between border-b pb-4">
             <div class="flex items-center gap-4">
-                <img class="w-20 h-20 rounded-full border-2 border-gray-300" src="<%= user.profilepic %>" alt="Profile Picture">
+                <img class="w-20 h-20 rounded-full object-cover border-2 border-gray-300" src="<%= user.profilepic %>" alt="Profile Picture">
                 <h1 class="text-2xl font-semibold text-gray-800">Hello, <span class="uppercase"><%= user.username %> 👋</span></h1>
             </div>
             <a class="py-2 mt-3 px-4 text-white font-medium rounded-md bg-red-600 hover:bg-red-700 transition shadow-md active:shadow-inner" href="/auth/logout">
