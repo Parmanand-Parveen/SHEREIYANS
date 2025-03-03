@@ -4,7 +4,7 @@ import userModel from "../models/user.model.js"
 
 
 export const createPostView = async (req, res) => {
-    res.render("createPost")
+    res.render("createpost")
 }
 
 
