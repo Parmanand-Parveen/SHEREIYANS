@@ -8,7 +8,7 @@ import Product from './Components/Product'
 import Nav from './Components/Nav'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
        <div>
@@ -16,7 +16,7 @@ function App() {
           <Routes>
            <Route path='/' element={<Home/>}/>
            <Route path='/product' element={<Product/>}/>
-          
+            
           </Routes>
         
        
